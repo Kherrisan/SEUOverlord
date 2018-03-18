@@ -267,7 +267,7 @@ def test_requests():
 
     session.post("http://xk.urp.seu.edu.cn/jw_css/system/login.action", data={
         'userId': 213151752,
-        'userPassword': "zoudick970514",
+        'userPassword': "",
         'checkCode': result,
         'x': 0,
         'y': 0
