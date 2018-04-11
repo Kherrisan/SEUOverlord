@@ -268,7 +268,7 @@ def test_requests():
 
     session.post("http://xk.urp.seu.edu.cn/jw_css/system/login.action", data={
         'userId': 213151752,
-        'userPassword': "zoudick970514",
+        'userPassword': "",
         'checkCode': result,
         'x': 0,
         'y': 0
@@ -280,18 +280,18 @@ def test_requests():
 def test_login():
     import asyncio
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(UserSession.login(213151752, "zoudick97051"))
+    loop.run_until_complete(UserSession.login(213151752, ""))
     loop.run_forever()
 
 
 async def test_get_page_async():
-    session, err = await UserSession.login(213151752, "zoudick970514")
+    session, err = await UserSession.login(213151752, "")
     clist = await session.get_page()
     print("\n".join([i.__str__() for i in clist]))
 
 
 async def test_get_list_async():
-    session, err = await UserSession.login(213151752, "zoudick970514")
+    session, err = await UserSession.login(213151752, "")
     clist = await session.get_list("jjygll")
     print("\n".join([i.__str__() for i in clist]))
 
